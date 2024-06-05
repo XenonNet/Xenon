@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  Xenon:
+    image: Xenon:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: Xenon
+    restart: unless-stopped
+    ports:
+      # Host:Container (DO NOT MODIFY THE CONTAINER PORT)
+      - "8081:8080"
